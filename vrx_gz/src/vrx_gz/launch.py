@@ -290,7 +290,7 @@ def spawn(sim_mode, world_name, models, robot=None):
             urdf_file = os.path.join(model_dir, 'model.urdf')
             with open(urdf_file, 'r') as infp:
                 robot_desc = infp.read()
-            params = {'use_sim_time': use_sim_time, 'frame_prefix': 'wamv/', 'robot_description': robot_desc}
+            params = {'use_sim_time': use_sim_time, 'frame_prefix': '', 'robot_description': robot_desc}
             nodes.append(Node(package='robot_state_publisher',
                                   executable='robot_state_publisher',
                                   output='both',

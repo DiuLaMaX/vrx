@@ -19,7 +19,7 @@
   <xacro:arg name="shooter_namespace" default="shooters/"/>
   <!-- Note: this is only used for some sensors that do not correctly use the
   robotNamespace parameter -->
-  <xacro:arg name="namespace" default="wamv"/>
+  <xacro:arg name="namespace" default=""/>
   <xacro:property name="thruster_namespace" value="$(arg thruster_namespace)" scope="global" />
   <xacro:property name="camera_namespace" value="$(arg camera_namespace)" scope="global" />
   <xacro:property name="sensor_namespace" value="$(arg sensor_namespace)" scope="global" />

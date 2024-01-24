@@ -48,7 +48,7 @@ WAVEFIELD_SIZE = {'sydney_regatta': 1000,}
 class Model:
 
     def __init__(self, model_name, model_type, position):
-        self.model_name = model_name
+        self.model_name = 'wamv1'
         self.model_type = model_type
         self.position = position
         self.battery_capacity = 0
@@ -233,7 +233,7 @@ class Model:
         # run xacro to generate urdf file
         xacro_command = ['xacro']
         xacro_command.append(self.urdf)
-        # xacro_command.append(f'namespace:={self.model_name}')
+        xacro_command.append(f'namespace:={self.model_name}')
         xacro_command.append(f'locked:=true')
         xacro_command.append(f'vrx_sensors_enabled:=true')
         xacro_command.append(f'thruster_config:=H')

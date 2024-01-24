@@ -233,7 +233,7 @@ class Model:
         # run xacro to generate urdf file
         xacro_command = ['xacro']
         xacro_command.append(self.urdf)
-        # xacro_command.append(f'namespace:={self.model_name}')
+        xacro_command.append(f'namespace:=wamv1')
         xacro_command.append(f'locked:=true')
         xacro_command.append(f'vrx_sensors_enabled:=true')
         xacro_command.append(f'thruster_config:=H')

@@ -616,8 +616,8 @@ void ScoringPlugin::OnContacts(const gz::msgs::Contacts &_contacts)
     std::string wamvCollisionStr2 = _contacts.contact(i).collision2().name();
 
     bool isWamvHit =
-      wamvCollisionStr1.find("wamv/base_link::") != std::string::npos ||
-      wamvCollisionStr2.find("wamv/base_link::") != std::string::npos;
+      wamvCollisionStr1.find("/base_link::") != std::string::npos ||
+      wamvCollisionStr2.find("/base_link::") != std::string::npos;
 
     bool isHitBufferPassed =
       (this->dataPtr->currentTime - this->dataPtr->lastCollisionTime).count() >

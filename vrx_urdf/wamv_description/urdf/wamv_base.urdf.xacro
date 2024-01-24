@@ -95,7 +95,7 @@
   </xacro:macro>
 
   <!-- Basic model of the 16' WAM-V USV -->
-  <link name="${namespace}/base_link">
+  <link name="/base_link">
     <visual>
       <geometry>
         <mesh filename="package://wamv_description/models/WAM-V-Base/mesh/WAM-V-Base.dae"/>
@@ -127,7 +127,7 @@
     <enable_wind>true</enable_wind>
   </gazebo>
 
-  <gazebo reference="${namespace}/base_link">
+  <gazebo reference="/base_link">
     <visual>
       <material>
         <diffuse>1.0 1.0 1.0</diffuse>
@@ -146,13 +146,13 @@
     <sensor type="contact" name="contact_sensor">
       <contact>
         <!-- collisions are renamed during urdf -> sdf fixed joint lumping -->
-        <collision>${namespace}/base_link_fixed_joint_lump__top_base_collision_24</collision>
-        <collision>${namespace}/base_link_fixed_joint_lump__left_float_collision</collision>
-        <collision>${namespace}/base_link_fixed_joint_lump__left_mid_float_collision_1</collision>
-        <collision>${namespace}/base_link_fixed_joint_lump__left_front_float_collision_2</collision>
-        <collision>${namespace}/base_link_fixed_joint_lump__right_float_collision_12</collision>
-        <collision>${namespace}/base_link_fixed_joint_lump__right_mid_float_collision_13</collision>
-        <collision>${namespace}/base_link_fixed_joint_lump__right_front_float_collision_14</collision>
+        <collision>/base_link_fixed_joint_lump__top_base_collision_24</collision>
+        <collision>/base_link_fixed_joint_lump__left_float_collision</collision>
+        <collision>/base_link_fixed_joint_lump__left_mid_float_collision_1</collision>
+        <collision>/base_link_fixed_joint_lump__left_front_float_collision_2</collision>
+        <collision>/base_link_fixed_joint_lump__right_float_collision_12</collision>
+        <collision>/base_link_fixed_joint_lump__right_mid_float_collision_13</collision>
+        <collision>/base_link_fixed_joint_lump__right_front_float_collision_14</collision>
         <topic>/vrx/contacts</topic>
       </contact>
       <always_on>1</always_on>

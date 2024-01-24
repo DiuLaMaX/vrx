@@ -294,8 +294,7 @@ def spawn(sim_mode, world_name, models, robot=None):
             nodes.append(Node(package='robot_state_publisher',
                                   executable='robot_state_publisher',
                                   output='both',
-                                  parameters=[params],
-                                  remappings=[('/joint_states', '/wamv/joint_states')]))
+                                  parameters=[params],))
 
             group_action = GroupAction([
                 PushRosNamespace(model.model_name),
